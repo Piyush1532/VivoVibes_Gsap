@@ -1,0 +1,237 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+:root{
+--main-clr:#000;
+--secondary-clr:#f9f9fb;
+}
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Karla", sans-serif;
+    text-transform: capitalize;
+    transition: all .3s ease;
+}
+
+::selection{
+    background:var(--main-clr);
+    color: #fff;
+}
+
+::-webkit-scrollbar{
+    width: 5px;
+}
+
+::-webkit-scrollbar-thumb{
+    background: var(--main-clr);
+}
+
+body{
+    height:200vh ;
+}
+
+html,body{
+    width: 100%;
+}
+
+html{
+    font-size: 62%;
+}
+
+
+/* Header design start */
+
+header{
+    width: 100%;
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+align-items:center;
+padding: 0 6rem;
+}
+header .box-gap{
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+    font-size: 1.6rem;
+}
+
+header .header-left > i{
+display: none;
+}
+
+ header .header-left img{
+    width:120px;
+    margin-right: 1rem;
+}
+
+
+header .header-left nav{
+    position: relative;
+}
+header .header-left nav > i{
+    display: none;
+}
+
+header .header-left nav a{
+    color: var(--main-clr);
+    padding: 1rem;
+}
+
+header .header-left nav a i{
+font-size: 1.2rem;
+margin-left: 5px;
+}
+
+header .header-left nav:hover a{
+    color: #999;
+}
+
+header .header-left nav a:hover{
+    color: var(--main-clr);
+}
+
+header .header-left nav .dropdown{
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: #fff;
+    border: 1px solid #ccc;
+    box-shadow:0px 4px 8px rgba(0,0,0,0.1) ;
+    z-index: 1000;
+    display:none;
+}
+
+header .header-left nav .dropdown a{
+    display: block;
+    padding: 10px;
+    white-space: nowrap;
+    color: var(--main-clr);
+}
+
+header .header-left nav :is(.category:hover + .dropdown ,.dropdown:hover){
+    display: block;
+}
+
+header .header-left nav .dropdown a:hover{
+    background: #f0f0f0;
+}
+header .header-right .search{
+    width: 15rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+padding: 0.6rem 0;
+border-bottom: 1px solid #aaa;
+}
+
+header .header-right .search label{
+    color: #aaa;
+}
+
+header .header-right .search input{
+   width: 100%;
+   outline: none;
+   border: none;
+   text-transform: none; 
+}
+
+header .header-right .search input::placeholder{
+    color: #aaa;
+    text-transform: capitalize;
+}
+header .header-right > i{
+    cursor: pointer;
+}
+/* Header design end */
+
+
+
+
+
+/* Media Queries Start */
+
+@media (max-width:1080px) {
+    html{
+        font-size: 54%;
+    }
+
+}
+
+@media (max-width:907px) {
+ 
+    header .header-left i{
+        display: block;
+        font-size: 1.8rem;
+        cursor: pointer;
+    }
+
+ header .header-left nav{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: rgb(0 0 0 /90%
+    );
+    backdrop-filter: blur(2px);
+    display: block;
+    padding: 0;
+    overflow: hidden;
+    max-height: 0;
+    transition-duration: .5s;
+ }
+
+
+ header .header-left nav.active{
+    padding: 4rem;
+    padding-top: 8rem;
+    max-height: 100%;
+ }
+
+ header .header-left nav > i{
+    display: block;
+    position: absolute;
+    color: #fff;
+    top: 4rem;
+    right: 4rem ;
+    background: rgb(250 250 250 / 30%);
+    padding: 0.4rem .6rem;
+    cursor: pointer;
+ }
+
+ header .header-left nav a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+ }
+
+ header .header-left nav a:hover{
+    color: #000;
+ }
+
+ header .header-left nav .dropdown{
+    top: 40%;
+    left: 55%;
+ } 
+}
+
+
+@media (max-width:757px) {
+header{
+    padding: 0 4rem;
+}
+
+}
+@media (max-width:434px) {
+    header .header-right .search{
+ width: 12rem;
+    }
+    
+    }
+/* Media Queries end */
+
+
