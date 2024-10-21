@@ -385,8 +385,110 @@ background: var(--secondary-clr);
 
 
 
+/* Category design start*/
+ .category{
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+ }
 
 
+ .category .container{
+    width: 100%;
+    margin-top: 5rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit ,minmax(250px,1fr));
+    gap: 4rem;
+ }
+
+ .category .container .box{
+    width: 100%;
+    overflow: hidden;
+    height: 35rem;
+    position: relative;
+ }
+ .category .container .box img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+ }
+
+ .category .container .box .slide{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgb(0 0 0/80%);
+    display: grid;
+    place-content: center;
+    transform: translate(0 ,35rem);
+    transition: .5s ease;
+ }
+ .category .container .box .slide h4{
+    font-size: 2rem;
+    color: #fff;
+ }
+
+ .category .container .box:hover .slide{
+  transform: translate(0,0);  
+ }
+
+ .category .container .box:hover img{
+    scale: 1.1;
+ }
+/* Category design end*/
+
+
+/* ambitions design start */
+
+.ambition{
+    margin-top: 10rem;
+    margin-bottom: 10rem;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 6rem;
+}
+
+.ambition .image{
+    width: 100%;
+    height: 55rem;
+}
+
+
+.ambition .image img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.ambition .text{
+    width: 100%;
+}
+.ambition .text p{
+    margin-top: 2rem;
+    font-size: 1.6rem;
+    line-height: 1.7;
+    color: #666;
+}
+
+
+.ambition .text a{
+    display: inline-block;
+    margin-top: 4rem;
+    background: var(--main-clr);
+    color: #fff;
+    font-size: 1.6rem;
+    padding: 1rem 2rem;
+}
+
+
+.ambition .text a:hover{
+    transform: translate(0,-5px);
+     box-shadow: 0 5px 10px rgb(0 0 0/30%);
+}
+
+/* ambitions design end */
 
 
 
@@ -416,6 +518,10 @@ background: var(--secondary-clr);
     .home .content h1{
 font-size: 4rem;
     }
+
+.ambition {
+    flex-direction: column;
+}
 
 }
 
@@ -506,12 +612,17 @@ header{
     padding: 0 4rem;
 }
 .popular {
-    margin-top: 5rem;
-    margin-bottom: 5rem;
+   padding-top: 5rem;
+   padding-bottom: 5rem;
 }
 
 .popular .furniture .box .image{
  max-height: 30rem;   
+}
+
+
+.ambition .image {
+    height: 40rem;
 }
 }
 
